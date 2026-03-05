@@ -1,0 +1,188 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --black: #111;
+  --mid: #555;
+  --light: #aaa;
+  --bg: #fafaf8;
+  --accent: #2a5caa;
+  --serif: Georgia, 'Times New Roman', serif;
+  --sans: system-ui, -apple-system, sans-serif;
+}
+
+html {
+  font-size: 18px;
+  background: var(--bg);
+  color: var(--black);
+}
+
+body {
+  font-family: var(--sans);
+  line-height: 1.6;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* NAV */
+
+header {
+  padding: 2.5rem 0 2rem;
+  display: flex;
+  align-items: baseline;
+  gap: 2rem;
+}
+
+header a {
+  text-decoration: none;
+  color: var(--mid);
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+}
+
+header a:hover,
+header a.active {
+  color: var(--black);
+}
+
+header .site-name {
+  font-family: var(--serif);
+  font-size: 1rem;
+  color: var(--black);
+  margin-right: auto;
+}
+
+/* FOOTER */
+
+footer {
+  margin: 5rem 0 2.5rem;
+  font-size: 0.8rem;
+  color: var(--light);
+}
+
+/* TYPOGRAPHY */
+
+h1 {
+  font-family: var(--serif);
+  font-size: 2.4rem;
+  font-weight: normal;
+  line-height: 1.15;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+}
+
+h3 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--mid);
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* HOME */
+
+.subtitle {
+  font-size: 1rem;
+  color: var(--mid);
+  margin-bottom: 4rem;
+}
+
+.blocks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem 3rem;
+  margin-bottom: 3.5rem;
+}
+
+.block p {
+  font-size: 0.95rem;
+  color: var(--mid);
+  white-space: pre-line;
+  margin: 0;
+  line-height: 1.55;
+}
+
+.rule {
+  font-size: 0.85rem;
+  color: var(--light);
+  letter-spacing: 0.03em;
+  border-top: 1px solid #e0e0dc;
+  padding-top: 1.5rem;
+}
+
+/* PLAN */
+
+.week ul {
+  list-style: none;
+  padding: 0;
+}
+
+.week ul li {
+  font-size: 0.95rem;
+  color: var(--mid);
+  padding: 0.35rem 0;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.week ul li:last-child {
+  border-bottom: none;
+}
+
+/* NOTES */
+
+.notes-section ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0.5rem;
+}
+
+.notes-section ul li {
+  font-size: 0.95rem;
+  color: var(--mid);
+  padding: 0.35rem 0;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.notes-section ul li:last-child {
+  border-bottom: none;
+}
+
+/* 404 */
+
+.not-found {
+  margin-top: 5rem;
+}
+
+.not-found a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 480px) {
+  .blocks {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  h1 {
+    font-size: 1.9rem;
+  }
+}

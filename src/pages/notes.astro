@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { notes } from '../content';
+---
+
+<Layout title="Notes" description="Packing, rules, and budget for the honeymoon.">
+  <h1>Notes</h1>
+
+  <div class="notes-section">
+    <h2>Packing</h2>
+    <ul>
+      {notes.packing.map((item) => (
+        <li>{item}</li>
+      ))}
+    </ul>
+  </div>
+
+  <div class="notes-section">
+    <h2>Trip Rules</h2>
+    <ul>
+      {notes.rules.map((item) => (
+        <li>{item}</li>
+      ))}
+    </ul>
+  </div>
+
+  <div class="notes-section">
+    <h2>Budget</h2>
+    <ul>
+      {notes.budget.map((item) => (
+        <li>{item}</li>
+      ))}
+    </ul>
+  </div>
+</Layout>

@@ -1,43 +1,36 @@
-# Astro Starter Kit: Minimal
+# christineohara.github.io
 
-```sh
-npm create astro@latest -- --template minimal
+Personal site for a three-week honeymoon.
+
+## Run
+
+```bash
+npm install
+npm run dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Open http://localhost:4321
 
-## 🚀 Project Structure
+## Build
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```bash
+npm run build
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Output goes to `/dist`.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Deploy
 
-Any static assets, like images, can be placed in the `public/` directory.
+The site deploys automatically to GitHub Pages on every push to `main`.
 
-## 🧞 Commands
+**One-time setup:**
 
-All commands are run from the root of the project, from a terminal:
+1. Push this repo to `seanduddy5/christineohara.github.io`
+2. Go to **Settings → Pages**
+3. Set source to **GitHub Actions**
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+That's it. Push to main and it deploys.
 
-## 👀 Want to learn more?
+## Edit content
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+All copy lives in `src/content.ts`. Change it there. Pages render from it automatically.

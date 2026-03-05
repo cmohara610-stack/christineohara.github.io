@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { plan } from '../content';
+---
+
+<Layout title="Plan" description="Three weeks. Stockholm, Norway, Amsterdam.">
+  <h1>The Plan</h1>
+
+  {plan.weeks.map((week) => (
+    <div class="week">
+      <h2>{week.title}</h2>
+      <ul>
+        {week.bullets.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+    </div>
+  ))}
+</Layout>

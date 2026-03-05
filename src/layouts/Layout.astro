@@ -1,0 +1,42 @@
+---
+import '../styles/global.css';
+import { site } from '../content';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = site.description } = Astro.props;
+const currentPath = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title} — {site.name}</title>
+  </head>
+  <body>
+    <header>
+      <span class="site-name">{site.name}</span>
+      <nav>
+        <a href="/" class={currentPath === '/' ? 'active' : ''}>Home</a>
+        <a href="/plan" class={currentPath === '/plan' ? 'active' : ''}>Plan</a>
+        <a href="/notes" class={currentPath === '/notes' ? 'active' : ''}>Notes</a>
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer>
+      Stockholm → Norway → Amsterdam
+    </footer>
+  </body>
+</html>
