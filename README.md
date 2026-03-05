@@ -25,7 +25,7 @@ The site deploys automatically to GitHub Pages on every push to `main`.
 
 **One-time setup:**
 
-1. Push this repo to `seanduddy5/christineohara.github.io`
+1. Push this repo to `cmohara610-stack/christineohara.github.io`
 2. Go to **Settings → Pages**
 3. Set source to **GitHub Actions**
 

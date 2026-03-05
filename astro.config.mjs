@@ -1,8 +1,7 @@
-// @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
 export default defineConfig({
-  site: 'https://seanduddy5.github.io',
-  base: '/christineohara.github.io',
-  output: 'static',
+  site: "https://cmohara610-stack.github.io",
+  base: "/",
+  output: "static",
 });
