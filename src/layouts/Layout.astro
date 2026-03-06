@@ -25,9 +25,9 @@ const currentPath = Astro.url.pathname;
     <header>
       <span class="site-name">{site.name}</span>
       <nav>
-        <a href="/" class={currentPath === '/' ? 'active' : ''}>Home</a>
-        <a href="/plan" class={currentPath === '/plan' ? 'active' : ''}>Plan</a>
-        <a href="/notes" class={currentPath === '/notes' ? 'active' : ''}>Notes</a>
+        <a href={`${import.meta.env.BASE_URL}`} class={currentPath === `${import.meta.env.BASE_URL}` ? 'active' : ''}>Home</a>
+        <a href={`${import.meta.env.BASE_URL}plan/`} class={currentPath.includes('/plan') ? 'active' : ''}>Plan</a>
+        <a href={`${import.meta.env.BASE_URL}notes/`} class={currentPath.includes('/notes') ? 'active' : ''}>Notes</a>
       </nav>
     </header>
 
