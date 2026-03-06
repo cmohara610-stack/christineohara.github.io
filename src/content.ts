@@ -1,5 +1,5 @@
 export const site = {
-  name: 'Christine O\'Hara',
+  name: 'A Honeymoon Up North',
   subtitle: 'A Scandinavian Honeymoon',
   description: 'Two people go north to celebrate marriage. The plan involves fjords, skis, and many saunas.',
 };
