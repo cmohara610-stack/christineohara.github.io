@@ -5,13 +5,14 @@
 }
 
 :root {
-  --black: #111;
-  --mid: #555;
-  --light: #aaa;
-  --bg: #fafaf8;
-  --accent: #2a5caa;
-  --serif: Georgia, 'Times New Roman', serif;
-  --sans: system-ui, -apple-system, sans-serif;
+  --black: #1c1917;
+  --mid: #78716c;
+  --light: #a8a29e;
+  --bg: #f8f5f0;
+  --accent: #44624a;
+  --border: #e7e0d8;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'DM Sans', system-ui, -apple-system, sans-serif;
 }
 
 html {
@@ -23,9 +24,9 @@ html {
 body {
   font-family: var(--sans);
   line-height: 1.6;
-  max-width: 680px;
+  max-width: 700px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 1.75rem;
 }
 
 /* NAV */
@@ -35,60 +36,72 @@ header {
   display: flex;
   align-items: baseline;
   gap: 2rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 3.5rem;
 }
 
 header a {
   text-decoration: none;
   color: var(--mid);
-  font-size: 0.9rem;
-  letter-spacing: 0.04em;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: color 0.15s;
 }
 
 header a:hover,
 header a.active {
-  color: var(--black);
+  color: var(--accent);
 }
 
 header .site-name {
   font-family: var(--serif);
-  font-size: 1rem;
+  font-size: 1.15rem;
+  font-weight: 500;
   color: var(--black);
   margin-right: auto;
+  letter-spacing: 0.01em;
 }
 
 /* FOOTER */
 
 footer {
-  margin: 5rem 0 2.5rem;
+  margin: 6rem 0 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
   font-size: 0.8rem;
   color: var(--light);
+  letter-spacing: 0.03em;
 }
 
 /* TYPOGRAPHY */
 
 h1 {
   font-family: var(--serif);
-  font-size: 2.4rem;
-  font-weight: normal;
-  line-height: 1.15;
-  margin-bottom: 0.5rem;
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 2.5rem;
+  letter-spacing: -0.01em;
 }
 
 h2 {
   font-family: var(--serif);
-  font-size: 1.3rem;
-  font-weight: normal;
+  font-size: 1.6rem;
+  font-weight: 400;
   margin-bottom: 1rem;
   margin-top: 3rem;
+  color: var(--black);
 }
 
 h3 {
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--mid);
-  margin-bottom: 0.5rem;
+  color: var(--accent);
+  margin-bottom: 0.6rem;
 }
 
 p {
@@ -97,17 +110,18 @@ p {
 
 /* HOME */
 
-.subtitle {
-  font-size: 1rem;
-  color: var(--mid);
-  margin-bottom: 4rem;
-}
-
 .blocks {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2.5rem 3rem;
+  gap: 1px;
   margin-bottom: 3.5rem;
+  border: 1px solid var(--border);
+  background: var(--border);
+}
+
+.block {
+  background: var(--bg);
+  padding: 1.75rem;
 }
 
 .block p {
@@ -115,15 +129,14 @@ p {
   color: var(--mid);
   white-space: pre-line;
   margin: 0;
-  line-height: 1.55;
+  line-height: 1.65;
 }
 
 .rule {
   font-size: 0.85rem;
   color: var(--light);
-  letter-spacing: 0.03em;
-  border-top: 1px solid #e0e0dc;
-  padding-top: 1.5rem;
+  letter-spacing: 0.04em;
+  font-style: italic;
 }
 
 /* PLAN */
@@ -136,30 +149,24 @@ p {
 .week ul li {
   font-size: 0.95rem;
   color: var(--mid);
-  padding: 0.35rem 0;
-  border-bottom: 1px solid #ebebeb;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.week ul li::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
 }
 
 .week ul li:last-child {
-  border-bottom: none;
-}
-
-/* NOTES */
-
-.notes-section ul {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 0.5rem;
-}
-
-.notes-section ul li {
-  font-size: 0.95rem;
-  color: var(--mid);
-  padding: 0.35rem 0;
-  border-bottom: 1px solid #ebebeb;
-}
-
-.notes-section ul li:last-child {
   border-bottom: none;
 }
 
@@ -176,13 +183,12 @@ p {
 
 /* RESPONSIVE */
 
-@media (max-width: 480px) {
+@media (max-width: 520px) {
   .blocks {
     grid-template-columns: 1fr;
-    gap: 2rem;
   }
 
   h1 {
-    font-size: 1.9rem;
+    font-size: 2.2rem;
   }
 }
