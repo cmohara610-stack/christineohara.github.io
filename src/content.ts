@@ -23,7 +23,7 @@ export const home = {
       body: 'There will be trains, wool sweaters, and possibly reindeer.\nAlso aquavit, which tastes like a Scandinavian secret.',
     },
   ],
-  rule: 'So it goes.',
+  rule: 'Stockholm → Norway → Amsterdam',
 };
 
 export const plan = {
