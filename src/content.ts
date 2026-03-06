@@ -4,90 +4,91 @@ export const site = {
   description: 'Three weeks. Two people. One good plan.',
 };
 
-export const home = {
-  blocks: [
-    {
-      title: 'Saunas',
-      body: 'You will sweat together.\nYou will emerge new.\nThis is the plan.',
-    },
-    {
-      title: 'Fjords',
-      body: 'The water is cold.\nThe mountains are tall.\nYou will feel small. That\'s fine.',
-    },
-    {
-      title: 'Heliskiing',
-      body: 'A helicopter drops you on a mountain.\nThen you ski down.\nLove was always a leap.',
-    },
-    {
-      title: 'Drinks',
-      body: 'Every city has a best bar.\nYou will find it.\nYou will stay too long. Good.',
-    },
-  ],
-  rule: 'Leave one day unplanned.',
-};
+<style>
 
-export const plan = {
-  weeks: [
-    {
-      title: 'Week 1: Stockholm',
-      bullets: [
-        'Arrive, sleep well — jet lag is honest',
-        'Gamla Stan — old town, very small streets',
-        'ABBA Museum — you\'re going, admit it',
-        'Swedish sauna — sweat before the fjords',
-        'Fika — coffee and cake, twice daily',
-        'Skansen — outdoor museum, surprisingly moving',
-      ],
-    },
-    {
-      title: 'Week 2: Norway',
-      bullets: [
-        'Fly to Bergen — gateway to everything',
-        'Nærøyfjord cruise — the one in all the photos',
-        'Flåm Railway — steep, slow, beautiful',
-        'Heliski Stranda — a guide, good gear, nerve',
-        'Ålesund — Art Nouveau town, wrong era, perfect',
-        'Sauna by the water — not optional',
-      ],
-    },
-    {
-      title: 'Week 3: Amsterdam',
-      bullets: [
-        'Arrive by train — better that way',
-        'Rijksmuseum — Rembrandt was onto something',
-        'Canal bikes — slow, silly, perfect',
-        'Jordaan neighborhood — walk until you\'re lost',
-        'Brown café — dark wood, cold beer, long talk',
-        'Flower market — one bouquet, carry it home',
-      ],
-    },
-  ],
-};
+body{
+  max-width:720px;
+  margin:100px auto;
+  padding:0 24px;
+  font-family: Georgia, serif;
+  line-height:1.7;
+  color:#1f2933;
+  background:#f5f7f6;
+}
 
-export const notes = {
-  packing: [
-    'Merino base layers — for everything',
-    'Rain jacket — always',
-    'One nice dinner outfit — one is enough',
-    'Wool socks — bring extra',
-    'Walking shoes — already broken in',
-    'Adapter plug — European standard',
-    'Small day pack',
-    'Sunscreen — even in March',
-  ],
-  rules: [
-    'No phones at dinner',
-    'One museum per day, maximum',
-    'Sleep when tired',
-    'Say yes to things that scare you a little',
-    'Leave one day unplanned',
-  ],
-  budget: [
-    'Flights',
-    'Accommodation',
-    'Heliski guide',
-    'Food and drink',
-    'Transport',
-    'Extras',
-  ],
-};
+h1{
+  font-size:48px;
+  font-weight:normal;
+  margin-bottom:40px;
+}
+
+h2{
+  font-size:22px;
+  margin-top:60px;
+  letter-spacing:.04em;
+}
+
+p{
+  font-size:18px;
+}
+
+hr{
+  border:none;
+  border-top:1px solid #d7dedc;
+  margin:60px 0;
+}
+
+footer{
+  margin-top:90px;
+  font-size:14px;
+  color:#6b7280;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>A Scandinavian Honeymoon</h1>
+
+<p>
+Two people go north to celebrate marriage.
+The plan involves fjords, skis, and many saunas.
+</p>
+
+<hr>
+
+<h2>Fjords</h2>
+
+<p>
+The fjords look like the earth cracked open and decided not to apologize.
+We will stare at them and feel small, which is healthy for a marriage.
+</p>
+
+<h2>Heliskiing</h2>
+
+<p>
+A helicopter drops you on a mountain because walking is apparently too honest.
+Then you ski down and try not to think about insurance.
+</p>
+
+<h2>Saunas</h2>
+
+<p>
+You sit in a wooden room until winter loses its authority.
+Then you step outside and scream.
+</p>
+
+<h2>Logistics</h2>
+
+<p>
+There will be trains, wool sweaters, and possibly reindeer.
+Also aquavit, which tastes like a Scandinavian secret.
+</p>
+
+<footer>
+So it goes.
+</footer>
+
+</body>
+</html>
